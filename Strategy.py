@@ -43,10 +43,7 @@ class CashContext:
 
 if __name__ == "__main__":
     money = input("money: ")
-    strategy = {}
-    strategy[1] = CashContext(CashNormal())
-    strategy[2] = CashContext(CashRebate(0.8))
-    strategy[3] = CashContext(CashReturn(300, 100))
+    strategy = {1: CashContext(CashNormal()), 2: CashContext(CashRebate(0.8)), 3: CashContext(CashReturn(300, 100))}
     ctype = input("type:[1]for normal,[2]for 80% discount [3]for 300 -100.")
     if ctype in strategy:
         cc = strategy[ctype]
